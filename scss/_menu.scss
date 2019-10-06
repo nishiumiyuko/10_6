@@ -1,0 +1,114 @@
+.title {
+    font-size: 18px;
+    color: $color3;
+    font-family: "Roboto";
+    position: relative;
+    display: inline-block;
+  }
+
+.title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: black;
+}
+
+.title:after {
+  right: -75px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tab {
+        flex-direction: column;
+        // width: 100%;
+    }
+}
+
+.menu-box {
+    margin-top: 12px;
+    @include tab {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 40px;
+    }
+    @include sp {
+        display: block;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .img {
+        width: 270px;
+        height: 270px;
+        background-size: cover;
+        @include sp {
+            width: 100%;
+            // height: 50%;
+        }
+    }
+    .menu-content {
+        width: 270px;
+        @include tab {
+            width: 350px;
+            margin-left: 10px;
+        }
+        @include sp {
+            width: 82%;
+            margin: 0 auto;
+        }
+        .menu-content-title {
+            margin-top: 38px;
+            font-size: 30px;
+            font-family: "Roboto Mono for Powerline";
+            @include tab {
+                margin-top: 0px;
+            }
+            @include sp {
+                margin-top: 30px;
+            }
+        }
+        .menu-content-text {
+            margin-top: 33px;
+            font-size: 16px;
+            font-family: "Roboto Mono for Powerline";
+            @include sp {
+                margin-top: 30px;
+            }
+        }
+        .menu-content-price {
+            margin-top: 34px;
+            font-size: 16px;
+            font-family: "Roboto Mono for Powerline";
+            text-align: right;
+            @include sp {
+                margin-top: 26px;
+            }
+        }
+    }
+}
+.menu-1-img {
+    background-image: url(../img/img4.png);
+    @include sp {
+        margin-top: 50px;
+    }
+}
+
+.menu-2-img {
+    background-image: url(../img/img5.png);
+    @include sp {
+        margin-top: 60px;
+    }
+}
+
+.menu-3-img {
+    background-image: url(../img/img6.png);
+    @include sp {
+        margin-top: 60px;
+    }
+}
