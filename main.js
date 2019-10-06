@@ -25,9 +25,10 @@ slideItems[0].classList.add('active', 'zoom')
 // }, 5000)
 
 setInterval(function () {
+    const currentNum = activeNum
     slideItems[activeNum].classList.remove('active')
     setTimeout(function () {
-        slideItems[activeNum].classList.remove('zoom')
+        slideItems[currentNum].classList.remove('zoom')
     }, FadeOutTime)
     activeNum = activeNum === MaxSlideNum ? 0 : activeNum + 1
     slideItems[activeNum].classList.add('active', 'zoom')
